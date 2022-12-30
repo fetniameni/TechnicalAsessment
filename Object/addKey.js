@@ -3,5 +3,7 @@
 
 var animal;
 var addKey;
-
+function addKey(animal){
+    return  animal.weight="50";
+}
 

@@ -14,15 +14,16 @@
       return num * num;
    }
 
-   square(10) + 2;
-   square(100) + square(77);
-   square(8 / 2)
-   square(2 + 17);
-   square(square(15));
+   square(10) + 2; //102
+   square(100) + square(77); //15929
+   square(8 / 2); //16
+   square(2 + 17); //361
+   square(square(15)); //50625
    ```
 
 2. Write a sentence in plain English describing how `square(square(15))` is
    evaluated.
+
 
 3. Rename `square`'s `num` parameter in your above code to `monkey`, and
    rename the uses of that parameter in the body to `monkey` as well. Will the
@@ -38,44 +39,47 @@
    function square(monkey) {
      return x * x;
    }
-
+    //x is not defined
    function square(5) {
      return 5 * 5;
    }
-
+     //Unexpected number
    function square("x") {
      return "x" * "x";
    }
+   //Unexpected string
    ```
 
 5. Fix the invalid syntax in the following functions (you can copy and paste these
    invalid definitions into your console and then edit them there):
 
    ```js
-   func square1(x {
+   function square1(x) {
      return x * x;
    }
 
-   functionsquare2 x)
+   function square2(x) {
      return x * x;
    }
 
-   function (x) square3 {
+   function square3(x) {
      return x * x;
+   }
    ```
 
 6. The following functions exhibit poor style -- fix these issues using the
    original version of `square` as a reference.
 
    ```js
-   function square(x){return x*x;}
-
-   function square (x) { return x *x;
+   function square(x) {
+     return x * x;
    }
 
-   function square(x)
-   {
-   return x * x;
+   function square(x) {
+     return x * x;
+   }
+   function square(x) {
+     return x * x;
    }
    ```
 
@@ -83,7 +87,7 @@
 
   ```js
   function cube(x) {
-    // your code here
+    return x * x * x;
   }
   ```
 
@@ -93,17 +97,28 @@
 
   ```js
   // don't forget the parameters!
-  function fullName() {
+  function fullName(firstName,lastName) {
     // your code here
+    return firstName + " " + lastName
   }
   fullName("John", "Doe") // => "John Doe"
   ```
 
 9. Write a function `average` that takes two numbers as input (parameters), and
    returns the average of those numbers.
+   ```js
+   function average(a,b) {
+    return (a+b)/2;
+   }
+   ```
 
 10. Write a function `greeter` that takes a name as an argument and *greets*
     that name by returning something along the lines of `"Hello, <name>!"`
+    ```js
+    function greeter(name) {
+      return "Hello," + " " + "<" +name+ ">!";
+    }
+    ```
 
 11. Using the document found at <a href="http://www.gbcnv.edu/documents/ASC/docs/00000005.pdf" target="_blank">this link</a>, translate the first page of geometric
     formulas into JavaScript functions.
@@ -114,6 +129,15 @@
     ```js
     function perimeterRect(l, w) {
       return 2 * (l + w);
+    }
+    function areaSquare(s) {
+     return s * s
+    }
+    function areaRect(l, w) {
+     return l * w
+    }
+    function perimeterTrap(s1,s2,b1,b2) {
+     return s1+s2+b1+b2
     }
     ```
 
@@ -140,6 +164,20 @@
 ### More Practice
 
 Translate the rest of the geometric formulas found <a href="http://www.gbcnv.edu/documents/ASC/docs/00000005.pdf" target="_blank">here</a> into JavaScript functions.
+```js
+    function perimeterRect(l, w) {
+      return 2 * (l + w);
+    }
+    function areaSquare(s) {
+     return s * s
+    }
+    function areaRect(l, w) {
+     return l * w
+    }
+    function perimeterTrap(s1,s2,b1,b2) {
+     return s1+s2+b1+b2
+    }
+    ```
 
 ### Advanced (extra practice)
 

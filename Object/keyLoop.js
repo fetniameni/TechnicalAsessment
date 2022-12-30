@@ -3,5 +3,7 @@
 // return "There's a monkey!", otherwise return "There's no monkey here!".
 
 var keyLoop;
+ 
+function keyLoop() {
 
-
+}

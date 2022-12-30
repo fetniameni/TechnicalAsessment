@@ -3,5 +3,7 @@
 
 var animal;
 var getKeys;
-
-
+ var animal= {name:"",age:"2ans",Species:"cat"}
+function getKeys(animal){
+    return (Object.keys(animal))
+}
